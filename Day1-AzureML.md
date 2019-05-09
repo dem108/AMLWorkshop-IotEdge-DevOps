@@ -15,15 +15,20 @@
     - [Visual Studio Code](https://code.visualstudio.com/)
     - [GitHub Desktop](https://desktop.github.com/)
     - (optional) Internet browser of your choice (Edge is fine, Chrome is also good)
+
   1. Check Azure subscription
     - All attendee should be able to sign in
+
   1. [Create an AML service workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace)
     - region: East US
     - resource group: new (one per person for practice)
     - after creation, check `Usage + quotas`, Standard NC Family vCPUs: should have 100+ available dedicated cores for this workshop (5 people * 6 cores * 2 nodes = 60 cores)
+
   1. (optional) Add users in `Access Control (IAM)`
     - FYI: [Manage users and roles - create custom roles](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-assign-roles#create-custom-role)
+
   1. From Azure ML service Workspace `Overview` tab, click `Download config.json`, save locally.
+
   1. Set up Notebook environment
     - Option 1: using Azure Notebooks
       - [Import the AML sample from GitHub](https://docs.microsoft.com/en-us/azure/notebooks/create-clone-jupyter-notebooks#import-a-project-from-github)
@@ -39,6 +44,7 @@
           ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyterlab-upload-config.jpg)
        - From `Notebook VMs`, click `Jupyter`, and continue running notebooks
           ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyter-notebook.jpg)
+          
   1. Create Azure ML Compute: To do that, open `configuration.ipynb`
     - Skip creating config.json, because you already have it
     - Proceed to create Azure ML Compute
