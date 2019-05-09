@@ -11,20 +11,20 @@
 
 #### ML Track
 - **10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks. Authenticate, prepare compute (Azure ML Compute).**
-  - Install
+  1. Install
     - [Visual Studio Code](https://code.visualstudio.com/)
     - [GitHub Desktop](https://desktop.github.com/)
     - (optional) Internet browser of your choice (Edge is fine, Chrome is also good)
-  - Check Azure subscription
+  1. Check Azure subscription
     - All attendee should be able to sign in
-  - [Create an AML service workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace)
+  1. [Create an AML service workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace)
     - region: East US
     - resource group: new (one per person for practice)
     - after creation, check `Usage + quotas`, Standard NC Family vCPUs: should have 100+ available dedicated cores for this workshop (5 people * 6 cores * 2 nodes = 60 cores)
-  - (optional) Add users in `Access Control (IAM)`
+  1. (optional) Add users in `Access Control (IAM)`
     - FYI: [Manage users and roles - create custom roles](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-assign-roles#create-custom-role)
-  - From Azure ML service Workspace `Overview` tab, click `Download config.json`, save locally.
-  - Set up Notebook environment
+  1. From Azure ML service Workspace `Overview` tab, click `Download config.json`, save locally.
+  1. Set up Notebook environment
     - Option 1: using Azure Notebooks
       - [Import the AML sample from GitHub](https://docs.microsoft.com/en-us/azure/notebooks/create-clone-jupyter-notebooks#import-a-project-from-github)
         - GitHub repo to import: https://github.com/Azure/MachineLearningNotebooks
@@ -38,15 +38,15 @@
         - on the left pane, create a folder `aml_config` under `MachineLearningNotebooks`, upload the config.json from the Azure ML service Workspace
           ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyterlab-upload-config.jpg)
        - From `Notebook VMs`, click `Jupyter`, and continue running notebooks
-          ~[](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyter-notebook.jpg)
-  - Create Azure ML Compute: To do that, open `configuration.ipynb`
+          ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyter-notebook.jpg)
+  1. Create Azure ML Compute: To do that, open `configuration.ipynb`
     - Skip creating config.json, because you already have it
     - Proceed to create Azure ML Compute
       - `cpucluster` STANDARD_D2_V3, 0 to 2 nodes
       - `gpucluster` STANDARD_NC6, 0 to 2 nodes
 
 - **11:00-11:50 Train first DL model on Notebook VM.**
-  - Open and run sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras`
+  1. Open and run sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras`
 
 - **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.**
 
