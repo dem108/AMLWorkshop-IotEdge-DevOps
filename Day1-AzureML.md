@@ -21,11 +21,11 @@
     1. [Create an AML service workspace](https://docs.microsoft.com/en-us/azure/machine-learning/service/setup-create-workspace)
         - region: East US
         - resource group: new (one per person for practice)
-        - after creation, check `Usage + quotas`, Standard NC Family vCPUs: should have 100+ available dedicated cores for this workshop (5 people * 6 cores * 2 nodes = 60 cores)
+        - after creation, check `Usage + quotas`, Standard NC Family vCPUs: should have 100+ available dedicated cores for this workshop (e.g., 5 people * 6 cores * 4 nodes = 120 cores)
     1. (optional) Add users in `Access Control (IAM)`
         - FYI: [Manage users and roles - create custom roles](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-assign-roles#create-custom-role)
     1. From Azure ML service Workspace `Overview` tab, click `Download config.json`, save locally.
-    1. Set up Notebook environment
+    1. Set up Notebook environment. In this workshop, use Option 1 to practice.
         - Option 1: using Azure Notebooks
             - [Import the AML sample from GitHub](https://docs.microsoft.com/en-us/azure/notebooks/create-clone-jupyter-notebooks#import-a-project-from-github)
                 - GitHub repo to import: https://github.com/Azure/MachineLearningNotebooks
@@ -34,22 +34,34 @@
         - Option 2: using Notebook VMs from Azure ML service Workspace
             - go to `Notebook VMs`, create a new VM (STANDARD_D3_V2)
             - Click `JupyterLab`, click `Terminal`
-            - cd or mkdir if needed, git clone with `git clone https://github.com/Azure/MachineLearningNotebooks`
+            - From the current directory `/mnt/azmnt/code/Users/`, cd <USERNAME> (or mkdir if needed), git clone with `git clone https://github.com/Azure/MachineLearningNotebooks`
             ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyterlab-gitclone.jpg)
-            - on the left pane, create a folder `aml_config` under `MachineLearningNotebooks`, upload the config.json from the Azure ML service Workspace
-            ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyterlab-upload-config.jpg)
-            - From `Notebook VMs`, click `Jupyter`, and continue running notebooks
+            - Note that the config.json is already automatically added to `/mnt/azmnt/`, you do ***not*** need to upload it manually.
+            - From `Notebook VMs`, click `Jupyter`, and you can run notebooks there
             ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/setup-notebook-vm-jupyter-notebook.jpg)
 
     1. Create Azure ML Compute: To do that, open `configuration.ipynb`
 
         - Skip creating config.json, because you already have it
+        - Instead, add a cell and run following script to load the config.json and authenticate.
+            ```python
+            from azureml.core import Workspace
+            ws = Workspace.from_config()
+            ```
+            ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/authenticate-workspace.jpg))
         - Proceed to create Azure ML Compute
-            - `cpucluster` STANDARD_D2_V3, 0 to 2 nodes
-            - `gpucluster` STANDARD_NC6, 0 to 2 nodes
+            - `cpucluster` STANDARD_D2_V3, 0 to 4 nodes
+            - `gpucluster` STANDARD_NC6, 0 to 4 nodes
 
 - **11:00-11:50 Train first DL model on Notebook VM.**
-    1. Open and run sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras`
+    1. Open and run (before `run.wait_for_complettion()` cell) sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras/train-hyperparameter-tune-deploy-with-keras.ipynb) from your notebook environment)
+    1. Monitor the Jupyter widget, and the Workspace (from Azure Portal - check Experiment and Compute)
+    1. Additionally, note that files in `./outputs` and `./logs` are automatically uploaded to the Workspace. Tensorboard logs should also be saved in this `./logs`. Refer to [how to train models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-train-ml-models#single-node-training) and [TensorBoard integration sample](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/tensorboard/tensorboard.ipynb).
+    1. Try to understand how the model files are moving, from AML Compute, to Workspace, to local environment.
+    1. Continue running the notebook and try hyperparameter tuning.
+        - Set `max_concurrent_job` parameter to the maximum number of nodes in your Azure ML Compute cluster.
+        - Run, monitor the Jupyter widget and Azure Portal (AML service Workspace), evaluate the results
+    1. Stop here. You may continue and deploy to ACI, but we will cover this in the afternoon.
 
 - **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.**
 
