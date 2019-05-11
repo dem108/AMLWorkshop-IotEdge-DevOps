@@ -61,6 +61,7 @@
     1. Continue running the notebook and try hyperparameter tuning.
         - Set `max_concurrent_job` parameter to the maximum number of nodes in your Azure ML Compute cluster.
         - Run, monitor the Jupyter widget and Azure Portal (AML service Workspace), evaluate the results
+            > Note: Generally when you open the Notebook, you can see the last run results of the code cells, but Jupyter widget results are not shown. So in order to review last Widget run status without running the experiment again, you should find and load the run before using the widget. Sample notebook to do this is [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/notebooks/Check-Jupyter-widget-for-a-specific-run.ipynb). 
     1. Stop here. You may continue and deploy to ACI, but we will cover this in the afternoon.
 
 - **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.**
