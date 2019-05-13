@@ -6,8 +6,8 @@
 
 #### 공통
 - 09:30-10:00 Workshop overview, scope, expectations
-  - Process flow and architecture [link(tbd)]()
-  - DevOps pipeline [link(tbd)]()
+  - Process flow and architecture ([pdf](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/doc/decks/Microsoft%20AI%20Architecture%20one-slider-EN-v20190513.pdf))
+  - DevOps pipeline ([pdf](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/doc/decks/DevOps-ML-IotEdge-pipeline-flow-v20190513.pdf))
 
 #### ML Track
 - **10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks. Authenticate, prepare compute (Azure ML Compute).**
@@ -79,6 +79,8 @@
 
     * If time permits, try below contents in addition:
 
+        - [visual-interface (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-tutorial-automobile-price-train-score)
+        - [automated ml with GUI (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments)
         - [interpretability-explainability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability)
         - [onnx](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-onnx)
         - [fpga](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-accelerate-with-fpgas)
