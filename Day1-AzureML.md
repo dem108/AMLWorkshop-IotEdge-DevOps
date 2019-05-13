@@ -85,6 +85,12 @@
         - [pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines)
         - [security](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
 
+    * Running AML SDK on Azure Databricks
+        - Set up Azure Databricks using this [guide](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks)
+        - Create a cluster, and import the [sample notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/azure-databricks/Databricks_AMLSDK_1-4_6.dbc).
+        - Install `azureml-sdk[automl_databricks]` if needed.
+        - Run samples.
+
     * And check out [MLOps](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-model-management-and-deployment). This will be covered in Day 3, but will be good if we can get familiar with key concepts earlier.
 
 - **17:00-17:50 Questions and answers**
