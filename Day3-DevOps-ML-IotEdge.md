@@ -107,6 +107,7 @@
             1. If needed, delete existing Image and/or Model from Azure ML service Workspace before testing.
             1. If the first stage (`QA - Deploy on ACI`) in the Release Pipeline was succesful, it will wait for your Approval for the second stage (`Prod - Deploy on AKS`)
             1. Approve and monitor the final stage.
+                Note: Current `61-AksWebserviceTest.py` deletes the web service (deployment) at the end. Change if needed.
 
         1. If you want to re-test CI/CD, you may make any arbitrary change (for example README.md), and do git commit and git push. 
 
@@ -124,7 +125,7 @@
     1. Open the Release Pipeline. Click Edit.
         1. Add a new stage `Prod - Deploy on IoT Edge`
             > More details to follow
-            
+
     1. Resume the release pipeline and test.
 
 - **17:00-17:50 Questions and answers**
