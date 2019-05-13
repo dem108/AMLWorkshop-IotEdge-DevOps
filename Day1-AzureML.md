@@ -54,7 +54,8 @@
             - `gpucluster` STANDARD_NC6, 0 to 4 nodes
 
 - **11:00-11:50 Train first DL model on Notebook VM.**
-    1. Open and run (before `run.wait_for_complettion()` cell) sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras/train-hyperparameter-tune-deploy-with-keras.ipynb) from your notebook environment)
+    1. Open sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras/train-hyperparameter-tune-deploy-with-keras.ipynb) from your notebook environment)
+    1. Run (before `run.wait_for_complettion()` cell)
     1. Monitor the Jupyter widget, and the Workspace (from Azure Portal - check Experiment and Compute)
     1. Additionally, note that files in `./outputs` and `./logs` are automatically uploaded to the Workspace. Tensorboard logs should also be saved in this `./logs`. Refer to [how to train models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-train-ml-models#single-node-training) and [TensorBoard integration sample](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/tensorboard/tensorboard.ipynb).
     1. Try to understand how the model files are moving, from AML Compute, to Workspace, to local environment.
@@ -62,11 +63,29 @@
         - Set `max_concurrent_job` parameter to the maximum number of nodes in your Azure ML Compute cluster.
         - Run, monitor the Jupyter widget and Azure Portal (AML service Workspace), evaluate the results
             > Note: Generally when you open the Notebook, you can see the last run results of the code cells, but Jupyter widget results are not shown. So in order to review last Widget run status without running the experiment again, you should find and load the run before using the widget. Sample notebook to do this is [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/notebooks/Check-Jupyter-widget-for-a-specific-run.ipynb). 
-    1. Stop here. You may continue and deploy to ACI, but we will cover this in the afternoon.
+    1. Stop here. You may continue and deploy to ACI from this notebook, but we will cover deployment in the afternoon.
 
 - **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.**
 
-- **15:00-16:50 Create container images, deploy to Azure Container Instance, Azure Kubernetes Service**
+    1. Open sample notebook `distributed-pytorch-with-horovod.ipynb` under `how-to-use-azureml/training-with-deep-learning/distributed-pytorch-with-horovod` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/distributed-pytorch-with-horovod/distributed-pytorch-with-horovod.ipynb) from your notebook environment)
+    1. Run all: consider using 4 nodes when available instead of 2 as `node_count`.
+    1. Questions and answers, or proceed to the next step.
+
+- **15:00-16:50 Create container images, deploy to Azure Container Instance (and/or Azure Kubernetes Service)**
+
+    1. We will continue from morning's sample, `train-hyperparameter-tune-deploy-with-keras.ipynb`. Open the notebook, and run the latter part, creating container image and deploying to ACI.
+    1. Explore Workspace from Azure Portal.
+    1. Refresh the concepts of MLOps from [concept-model-management-and-deployment](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-model-management-and-deployment)
+
+    * If time permits, try below contents in addition:
+
+        - [interpretability-explainability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability)
+        - [onnx](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-onnx)
+        - [fpga](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-accelerate-with-fpgas)
+        - [pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines)
+        - [security](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
+
+    * And check out [MLOps](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-model-management-and-deployment). This will be covered in Day 3, but will be good if we can get familiar with key concepts earlier.
 
 - **17:00-17:50 Questions and answers**
 

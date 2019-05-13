@@ -2,7 +2,7 @@
 > ML/IoT/DevOps Hands on workshop
 
 ## Agenda
-### Day 1 / 2019년 5월 15일(수)
+### Day 1 / 2019년 5월 15일(수) - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day1-AzureML.md)
 
 #### 공통
 - 09:30-10:00 Workshop overview, scope, expectations
