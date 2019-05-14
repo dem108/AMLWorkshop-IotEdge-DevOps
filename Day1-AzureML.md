@@ -9,8 +9,9 @@
   - Process flow and architecture ([pdf](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/doc/decks/Microsoft%20AI%20Architecture%20one-slider-EN-v20190513.pdf))
   - DevOps pipeline ([pdf](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/doc/decks/DevOps-ML-IotEdge-pipeline-flow-v20190513.pdf))
 
+
 #### ML Track
-- **10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks. Authenticate, prepare compute (Azure ML Compute).**
+- **10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks, authenticate, prepare compute (Azure ML Compute)**
 
     1. Install
         - [Visual Studio Code](https://code.visualstudio.com/)
@@ -54,6 +55,7 @@
             - `gpucluster` STANDARD_NC6, 0 to 4 nodes
 
 - **11:00-11:50 Train first DL model on Azure Notebooks using Azure ML Compute**
+
     1. Open sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras/train-hyperparameter-tune-deploy-with-keras.ipynb) from your notebook environment)
     1. Run (before `run.wait_for_complettion()` cell)
     1. Monitor the Jupyter widget, and the Workspace (from Azure Portal - check Experiment and Compute)
@@ -79,6 +81,7 @@
 
     * If time permits, try below contents in addition:
 
+        - [Build 2019 updates](https://azure.microsoft.com/en-us/blog/new-azure-machine-learning-updates-simplify-and-accelerate-the-ml-lifecycle/): New Azure Machine Learning updates simplify and accelerate the ML lifecycle
         - [visual-interface (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-tutorial-automobile-price-train-score)
         - [automated ml with GUI (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments)
         - [interpretability-explainability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability)
@@ -86,6 +89,7 @@
         - [fpga](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-accelerate-with-fpgas)
         - [pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines)
         - [security](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
+        - [custom vision](https://customvision.ai)
 
     * Running AML SDK on Azure Databricks
         - Set up Azure Databricks using this [guide](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks)

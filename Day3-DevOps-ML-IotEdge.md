@@ -113,20 +113,55 @@
 
 - **15:00-16:50 Integrate with IoT Edge deployment**
 
-    1. Let's add a stage that deploys the ACR image for IoT Edge devices. First check out the REST API URL for allowing the IoT Hub to use the new ACR image.
-        - [URL to be added]() by @JeongAe Lee
+    1. We'll create a DevOps Project from Azure Portal this time, leveraging [this](https://docs.microsoft.com/ko-kr/azure/iot-edge/how-to-devops-project) and [this](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-ci-cd), and an additional sample code (shared below). 
     
-    1. Pause build temporarily by opening Build Pipeline, clicking context menu (the icon is on the right side of the `Queue` button), and choosing `Pause builds`. Later, you will `Resume builds` from here.
-        - In real project, you may instead create a separate pipeline, dev/test, and switch pipelines.
+    1. Create new `DevOps Project`.
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-01-new-project.jpg)
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-02-python.jpg)
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-Io`tEdge-DevOps/master/doc/images/devops-iot-03-simple-iotjpg.jpg)
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-04-name-project-iothub.jpg)
 
-    1. Create a new .py `52-deployOnIotEdge.py` and push to `master` branch.
-        - [URL to be updated]() by @JeongAe Lee
+        - IoT Hub is also created.
+
+    1. You can now go to dev.azure.com and continue browsing.
     
-    1. Open the Release Pipeline. Click Edit.
-        1. Add a new stage `Prod - Deploy on IoT Edge`
-            > More details to follow
+    1. First disable CI for a moment. To do that:
+        1. Go to Pipelines - Build Pipelines.
+        1. Click `Triggers` tab, uncheck `Enable continuous integration`, save.
 
-    1. Resume the release pipeline and test.
+    1. Git clone its repo. Create a personal token if needed.
+
+    1. Copy [these files(TBD)]()(`VisionSampleModule`) into `/modules/VisionSampleModule` of that local repo, git commit, and git push. Now the additional module for our Edge deployment is added.
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-05-sample-module-added.jpg)
+
+    1. Rename `/deployment.template.json` into `/deployment.template.basic.json`
+
+    1. Copy [this file(TBD)]() to `/` as `/deployment.template.visionsample.json` of local repo.
+
+    1. Then git commit and git push.
+        ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-06-uploaded-files.jpg)
+
+    1. Modify Build Pipelines to work on our `VisionSampleModule`, not the original sample. To do that:
+        1. Go to Build Pipeline, edit the Build Pipeline.
+            - deployment template: `deployment.template.visionsample.json`
+            - platform: `arm32v7`
+            ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-07-update-build-pipeline.jpg)
+
+        1. Click `Variable` tab, add variable `REGISTRYNAME`
+            ![](https://raw.githubusercontent.com/dem108/AMLWorkshop-IotEdge-DevOps/master/doc/images/devops-iot-08-update-build-pipeline-variable.jpg)
+
+        1. `Save` and `Queue` to test the build.
+
+    1. Go to Azure Portal, open the IotHub created above, choose `IoT Edge` from left pane. Click the edge device `myEdgeDevice`, copy connection string and register it on AI Camera.
+
+    1. Test locally.
+
+    1. Enable CI. To do that:
+        1. Go to Pipelines - Build Pipelines.
+        1. Click `Triggers` tab, check `Enable continuous integration`, save.
+
+    1. Test with git commit.
+    
 
 - **17:00-17:50 Questions and answers**
 
