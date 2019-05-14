@@ -17,10 +17,12 @@
 ### Day 2 / 2019년 5월 16일(목)
 
 #### IoT Track
-- 09:30-10:20 Dev environment setup, Azure Resource creation - IoT Hub, DPS, Cosmos DB, ASA, Storage, etc….
-- 10:30-11:50 Device Provisioning hands-on (X.509 Group Enrollment, X.509 Individual Enrollment)
-- 13:00-14:50 D2C message, Azure Stream Analytics, Data to Storage/DB
-- 15:00-17:50 Custom Vision Edge module deployment
+- 09:30-10:00 Dev environment setup, Azure Resource creation (IoT Hub, DPS, Cosmos DB, ASA, Storage, etc)
+- 10:00-10:30 Set-up Raspberry Pi
+- 10:40-11:00 Run D2C message application on Pi
+- 11:00-11:50 Provision a device using Azure IoT DPS (X.509 Individual Enrollment)
+- 13:00-13:50 D2C message, Azure Stream Analytics, Data to Storage/DB
+- 14:00-17:50 Custom Vision Edge module deployment
 
 
 ### Day 3 / 2019년 5월 17일(금) - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day3-DevOps-ML-IotEdge.md)
