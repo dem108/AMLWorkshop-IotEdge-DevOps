@@ -53,7 +53,7 @@
             - `cpucluster` STANDARD_D2_V3, 0 to 4 nodes
             - `gpucluster` STANDARD_NC6, 0 to 4 nodes
 
-- **11:00-11:50 Train first DL model on Notebook VM.**
+- **11:00-11:50 Train first DL model on Azure Notebooks using Azure ML Compute**
     1. Open sample notebook `train-hyperparameter-tune-deploy-with-keras.ipynb` under `how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/train-hyperparameter-tune-deploy-with-keras/train-hyperparameter-tune-deploy-with-keras.ipynb) from your notebook environment)
     1. Run (before `run.wait_for_complettion()` cell)
     1. Monitor the Jupyter widget, and the Workspace (from Azure Portal - check Experiment and Compute)
@@ -65,7 +65,7 @@
             > Note: Generally when you open the Notebook, you can see the last run results of the code cells, but Jupyter widget results are not shown. So in order to review last Widget run status without running the experiment again, you should find and load the run before using the widget. Sample notebook to do this is [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/notebooks/Check-Jupyter-widget-for-a-specific-run.ipynb). 
     1. Stop here. You may continue and deploy to ACI from this notebook, but we will cover deployment in the afternoon.
 
-- **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.**
+- **13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace**
 
     1. Open sample notebook `distributed-pytorch-with-horovod.ipynb` under `how-to-use-azureml/training-with-deep-learning/distributed-pytorch-with-horovod` (find [this notebook](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/training-with-deep-learning/distributed-pytorch-with-horovod/distributed-pytorch-with-horovod.ipynb) from your notebook environment)
     1. Run all: consider using 4 nodes when available instead of 2 as `node_count`.

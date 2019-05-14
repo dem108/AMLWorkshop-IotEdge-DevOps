@@ -19,7 +19,7 @@
         - We'll make it work, test CI/CD, then tweak a bit to use IoT Edge for deployment target.
         - At the end of the day, initiate the CI/CD pipeline with `git commit`, and track the pipeline run. 
 
-- **10:00-11:50 Dev environment setup: GitHub Desktop, Azure DevOps(create DevOps account, Organization). Create from Azure ML template. Customize Build Pipeline.**
+- **10:00-11:50 Dev environment setup: Use GitHub Desktop, Azure DevOps(create DevOps account, Organization), create from Azure ML template, customize Build Pipeline**
 
     1. Create an Azure DevOps account from [DevOps start page](https://azure.microsoft.com/en-us/services/devops/?nav=min) - `Start Free`
         What you also create is an `organization`. Note the organization name created.
@@ -46,7 +46,7 @@
 
         > Note: We are using Azure CLI Authentication now. Check out other ways to [authenticate](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/manage-azureml-service/authentication-in-azureml/authentication-in-azure-ml.ipynb).
 
-- **13:00-14:50 Customize Release Pipeline. Git clone using personal token. Test CI build.**
+- **13:00-14:50 Customize Release Pipeline, Git clone using personal token, test CI build**
 
     1. Open `Deploy Webservice` Release Pipeline. Notice that releases were automatically initiated but failed.
     
