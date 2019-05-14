@@ -8,11 +8,12 @@
 - 09:30-10:00 Workshop overview, scope, expectations
 
 #### ML Track
-- 10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks. Authenticate, prepare computes (DSVM and Azure ML Compute).
-- 11:00-11:50 Train first DL model on DSVM.
-- 13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace.
-- 15:00-16:50 Create container images, deploy to Azure Container Instance, Azure Kubernetes Service
+- 10:00-10:50 Dev environment setup: Azure ML service Workspace and Azure Notebooks. Authenticate, prepare compute (Azure ML Compute)
+- 11:00-11:50 Train first DL model on Azure Notebooks using Azure ML Compute
+- 13:00-14:50 Distributed training with Horovod on AML Compute, explore AML Workspace
+- 15:00-16:50 Create container images, deploy to Azure Container Instance (and/or Azure Kubernetes Service)
 - 17:00-17:50 Questions and answers
+
 
 ### Day 2 / 2019년 5월 16일(목)
 
@@ -27,11 +28,10 @@
 
 ### Day 3 / 2019년 5월 17일(금) - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day3-DevOps-ML-IotEdge.md)
 
-
 #### ML+IoT Edge+DevOps Track
 - 09:30-10:00 Day 1, 2 reflection, Day 3 expectations
-- 10:00-11:50 Dev environment setup: GitHub Desktop, Azure DevOps(create DevOps account, Organization). Create from Azure ML template. Customize Build Pipeline.
-- 13:00-14:50 Customize Release Pipeline. Git clone using personal token. Test CI build.
+- 10:00-11:50 Dev environment setup: Use GitHub Desktop, Azure DevOps(create DevOps account, Organization), create from Azure ML template, customize Build Pipeline
+- 13:00-14:50 Customize Release Pipeline, Git clone using personal token, test CI build
 - 15:00-16:50 Integrate with IoT Edge deployment
 - 17:00-17:50 Questions and answers
 
