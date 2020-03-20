@@ -2,7 +2,7 @@
 > ML/IoT/DevOps Hands on workshop
 
 ## Agenda
-### Day 1 / 2019년 5월 15일(수) - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day1-AzureML.md)
+### Day 1 - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day1-AzureML.md)
 
 #### 공통
 - 09:30-10:00 Workshop overview, scope, expectations
@@ -15,7 +15,7 @@
 - 17:00-17:50 Questions and answers
 
 
-### Day 2 / 2019년 5월 16일(목)
+### Day 2
 
 #### IoT Track
 - 09:30-10:00 Dev environment setup, Azure Resource creation (IoT Hub, DPS, Cosmos DB, ASA, Storage, etc)
@@ -26,7 +26,7 @@
 - 14:00-17:50 Custom Vision Edge module deployment
 
 
-### Day 3 / 2019년 5월 17일(금) - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day3-DevOps-ML-IotEdge.md)
+### Day 3 - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/Day3-DevOps-ML-IotEdge.md)
 
 #### ML+IoT Edge+DevOps Track
 - 09:30-10:00 Day 1, 2 reflection, Day 3 expectations

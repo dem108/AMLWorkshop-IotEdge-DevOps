@@ -2,7 +2,7 @@
 > ML/IoT/DevOps Hands on workshop
 
 ## Agenda
-### Day 3 / 2019년 5월 17일(금)
+### Day 3
 
 #### ML+IoT Edge+DevOps Track
 - **09:30-10:00 Day 1, 2 reflection, Day 3 expectations**
