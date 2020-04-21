@@ -88,8 +88,11 @@
         - [onnx](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-onnx)
         - [fpga](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-accelerate-with-fpgas)
         - [pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines)
-        - [security](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
-        - [custom vision](https://customvision.ai)
+        - [Enterprise Readiness](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
+        - [Distributed Training with SR-IOV](https://techcommunity.microsoft.com/t5/azure-ai/accelerating-distributed-training-in-azure-machine-learning/ba-p/1059050)
+        - [DeepSpeed](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
+        - [Model Inference Optimization (private)](https://github.com/Azure/ModelInferenceOptimization#model-inference-optimization-workflow-and-hidden-tech)
+        - [custom vision](https://customvision.ai)  
 
     * Running AML SDK on Azure Databricks
         - Set up Azure Databricks using this [guide](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks)
