@@ -171,5 +171,5 @@
         - [Distributed Training with SR-IOV](https://techcommunity.microsoft.com/t5/azure-ai/accelerating-distributed-training-in-azure-machine-learning/ba-p/1059050)
         - [DeepSpeed](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
         - [Model Inference Optimization (private)](https://github.com/Azure/ModelInferenceOptimization#model-inference-optimization-workflow-and-hidden-tech)
-        - [custom vision](https://customvision.ai)        
+        - [custom vision](https://customvision.ai)
     1. Further questions

@@ -49,7 +49,7 @@
 
 ## Agenda: ML/IoT/DevOps Hands on Workshop
 
-### Day 1: Azure ML Basic - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/agendas/Day1-AzureML.md)
+### Day 1: Azure ML Basic - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/agendas/mlops-edge/Day1-AzureML.md)
 
 - Common
   - 09:30-10:00 Workshop overview, scope, expectations
@@ -61,6 +61,18 @@
   - 15:00-16:50 Create container images, deploy to Azure Container Instance (and/or Azure Kubernetes Service)
   - 17:00-17:50 Questions and answers
 
+### Day 1 (halfday version): Azure ML Basic - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/agendas/mlops-edge/Day1-AzureML-halfday.md)
+
+- Prepare (before workshop)
+  - Check Azure subscriptoin
+  - Install
+  
+- Afternoon
+  - 14:00-14:50 Workshop overview, scope, expectations and getting started
+  - 15:00-15:50 15:00-15:50 Visit AML studio, create computes and try Notebooks
+  - 16:00-16:50 16:00-16:50 Try Automated ML
+  - 17:00-17:50 17:00-17:50 Check out Designer and MLOps
+
 ### Day 2: IoT and Edge Basic
 
 - IoT Track
@@ -71,7 +83,7 @@
   - 13:00-13:50 D2C message, Azure Stream Analytics, Data to Storage/DB
   - 14:00-17:50 Custom Vision Edge module deployment
 
-### Day 3: ML + IoT Edge + DevOps - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/agendas/Day3-DevOps-ML-IotEdge.md)
+### Day 3: ML + IoT Edge + DevOps - full instructions [here](https://github.com/dem108/AMLWorkshop-IotEdge-DevOps/blob/master/agendas/mlops-edge/Day3-DevOps-ML-IotEdge.md)
 
 - ML+IoT Edge+DevOps Track
   - 09:30-10:00 Day 1, 2 reflection, Day 3 expectations
