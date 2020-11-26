@@ -1,6 +1,9 @@
 # AMLWorkshop-IotEdge-DevOps
 > This repo caters different scenarios regarding Azure ML workshops
 
+- [Agenda: Many Models with Azure ML](#agenda-many-models-with-azure-ml)
+- [Agenda: ML/IoT/DevOps Hands on Workshop](#agenda-mliotdevops-hands-on-workshop)
+
 ---
 
 ## Agenda: Many Models with Azure ML
