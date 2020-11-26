@@ -1,4 +1,4 @@
-#### Questions and Answers
+#### Questions and Answers: May 2020
 
 - Want to use Custom Docker Image as a base when training a ML model
     - Baseline
@@ -20,23 +20,8 @@
 - ML 배포용 AKS에 GPU를 쓸 수 있는지
 
 - 설명에 의하면 Training할 때 생성되는 Container 이미지도 ACR에 등록되고 subsequent runs를 위해 cache된다고 하는데, 이 cache purge는 experiment completion 때 되는지? 실제 학습했던 경우에도 image push가 안되는 것으로 보임.
-    - ACR에는 없는데
-    - Remote Compute (예 AML Compute)에 존재할 것으로 보임
+    - Basic mechanism: https://docs.microsoft.com/en-us/azure/machine-learning/concept-train-machine-learning-model#understand-what-happens-when-you-submit-a-training-job
+    - Remote Compute (예 AML Compute)에 남아 있을 것으로 보임
         - AML Compute 경우면 worker node 다 만들고 나서 Preparing 단계에서 docker pull할 것으로 보임
         - worker node가 삭제되지 않고 남아있는 상태에서 재실행하면 재활용할 것 같음
-
-AML service Workspace: East US
-
-default data store: East US
-AML compute: East US
-AKS as compute: Korea Central
-
-Supported operation:
-- Submit experiment: AKS in Korea Central
-
-Question?
-1. Additional Datastore: Korea Central
-2. AML Compute: Korea Central
-
-This enables using both datastore and compute from Korea Central, supporting data sovereignty, while using AML service Workspace in other regions
 

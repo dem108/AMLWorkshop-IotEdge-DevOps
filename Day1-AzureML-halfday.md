@@ -7,7 +7,14 @@
 - Azure에 데이터를 올리는 가장 간단한 방법부터 시작해서, Azure ML workspace를 생성하고 첫 실험을 수행하는 부분, Azure ML의 주요 기능 중에서 선별하여 실습 또는 데모를 통해 체험을 합니다.
 - Inference 부분은 시간이 부족하여 MLOps 관점에서 데모 중심으로 커버합니다.
 - 본 버전에서는 Client에 설치를 최소화하고 Cloud 환경에서 대부분의 작업을 진행합니다.
-- 본 세션으로 Azure ML의 모든 것을 알 수는 없으나 최소한의 개념을 일부라도 직접 체험하고 향후 기능별로 알아보는 기초를 마련하도록 합니다.
+- 본 세션으로 Azure ML의 모든 것을 알 수는 없으나 최소한의 개념을 일부라도 직접 체험하고 향후에 기능별로 알아보기 위한 기초를 마련하도록 합니다.
+- 시간이 허용된다면 고급 기능의 일부를 알아봅니다:
+  - Experiment e2e tracking
+  - Automated ML, HyperDrive
+  - MLOps
+  - Distributed Training with SR-IOV
+  - DeepSpeed
+  - Enterprise Readiness
 
 ## Agenda
 
@@ -152,4 +159,17 @@
         1. Revist the architecture diagram
         1. Check out quick demos
             1. [Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/?name=azure%20machine%20learning)
+    1. Some more additional features
+        - [Build 2019 updates](https://azure.microsoft.com/en-us/blog/new-azure-machine-learning-updates-simplify-and-accelerate-the-ml-lifecycle/): New Azure Machine Learning updates simplify and accelerate the ML lifecycle
+        - [visual-interface (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/ui-tutorial-automobile-price-train-score)
+        - [automated ml with GUI (preview)](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments)
+        - [interpretability-explainability](https://docs.microsoft.com/en-us/azure/machine-learning/service/machine-learning-interpretability-explainability)
+        - [onnx](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-onnx)
+        - [fpga](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-accelerate-with-fpgas)
+        - [pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines)
+        - [Enterprise Readiness](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
+        - [Distributed Training with SR-IOV](https://techcommunity.microsoft.com/t5/azure-ai/accelerating-distributed-training-in-azure-machine-learning/ba-p/1059050)
+        - [DeepSpeed](https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/)
+        - [Model Inference Optimization (private)](https://github.com/Azure/ModelInferenceOptimization#model-inference-optimization-workflow-and-hidden-tech)
+        - [custom vision](https://customvision.ai)        
     1. Further questions
